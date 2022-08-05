@@ -1,3 +1,4 @@
+/* Header CSS Start */
 .header-page {
     width: 100%;
     height: 120px;
@@ -24,6 +25,8 @@
 }
 
 .header-navbar-list a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--light-color);
 }
@@ -43,3 +46,132 @@
     font-weight: 100;
     opacity: 0.4;
 }
+
+.header-navbar-item__icon{
+    margin-right: 4px;
+}
+
+.header-navbar-item__icon:nth-child(3){
+    margin-left: 4px;
+}
+
+.header-navbar-item:hover .header-qrcode{
+    display: block;
+}
+
+.header-qrcode{
+    display: none;
+    width: 160px;
+    padding: 1px;
+    background-color: #fff;
+    position: absolute; 
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgb(182, 182, 182);
+    animation: fadeIn linear 0.2s;
+}
+
+.header-qrcode__img{
+    width: 100%;
+}
+
+.header-qrcode-app{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11px 10px 11px;
+}
+
+.header-qrcode-app__img{
+    width: 64px;
+}
+
+.header-navbar-item:hover .header-navbar-notify{
+    display: block;
+}
+
+.header-navbar-notify{
+    display: none;
+    width: 390px;
+    height: 340px;
+    transform-origin: calc(100% - 12px) top ;
+}
+
+.header-navbar-notify::before{
+    top: -17px;
+    right: 12px;
+}
+
+.navbar-notify-info{
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-light-color);
+}
+
+.navbar-notify-info__img{
+    width: 100px;
+}
+
+.navbar-notify-info__text{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.navbar-notify-control{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.navbar-notify-control__btn{
+    background-color: #f5f5f5;
+    color: var(--dark-light-color);
+    font-weight: 400;
+    flex: 1;
+    padding: 12px 0;
+    font-size: 1.4rem;
+}
+
+.navbar-notify-control__btn:hover{
+    background-color: #e8e8e8;
+    color: var(--primary-color)
+}
+
+.header-navbar-item:hover .header-navbar-lang{
+    display: block;
+}
+
+.header-navbar-lang{
+    display: none;
+    width: 185px;
+    transform-origin: calc(100% - 32px) top;
+}
+
+.header-navbar-lang::before{
+    top: -17px;
+    right: 32px;
+}
+
+.header-navbar-lang__btn{
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    padding: 12px 16px;
+    font-size: 1.4rem;
+}
+
+.header-navbar-lang__btn--active{
+    color: var(--primary-color)
+}
+
+
+
+
+

@@ -2,6 +2,7 @@
     --primary-color: #f63f2e;
     --light-color: #fffcf2;
     --dark-color: #333333;
+    --dark-light-color: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -179,6 +180,37 @@ html {
     }
 
     to {
-        opacity: 1;                   
+        opacity: 1;
     }
+}
+
+/* Button */
+.btn {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: none;
+    display: inline-block;
+}
+
+/* notification */
+.notify{
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgb(182, 182, 182);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    animation: grow linear 0.2s;
+}
+
+.notify::before{
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    border-width: 10px 20px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
 }
